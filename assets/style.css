@@ -1,0 +1,253 @@
+.tableBody {
+  font-family: Serif;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.periodic {
+  position: relative;
+  height: 200px;
+  margin-right: -1px;
+  text-shadow: none;
+}
+.periodic-row {
+  clear: both;
+  height: 10%;
+}
+/*Set size and position of each strain cell*/
+.cell {
+  float: left;
+  position: relative;
+  width: 4.545%;
+  height: 100%;
+}
+.element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 1px;
+  right: 1px;
+  box-sizing: border-box;
+  /*box-shadow: 5px 5px 4px rgba(255, 255, 255, 0.5);*/
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+  cursor: default;
+  pointer-events: none;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  background-color: rgba(0, 128, 128, 0.6);
+}
+.cell:hover .element {
+  border-color: rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(3, 3);
+  -ms-transform: scale(3, 3);
+  transform: scale(3, 3);
+  z-index: 1;
+  background-color: rgba(0, 128, 128, 0.9);
+}
+.type,
+.strainName {
+  position: absolute;
+  font-size: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+}
+/*Position Type*/
+.type {
+  top: 4px;
+  right: 5px;
+}
+/*Position Symbol*/
+.symbol {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  right: 0px;
+  margin-top: -4px;
+  font-size: 9px;
+  line-height: 1;
+  height: 9px;
+  color: rgba(255, 255, 255, 0.9);
+}
+/*Position Strain Name*/
+.strainName {
+  bottom: 4px;
+  left: 0px;
+  right: 0px;
+}
+/*Indica Strain Cells*/
+.cell:nth-child(1) .element,
+.cell:nth-child(2) .element,
+.cell:nth-child(3) .element,
+.cell:nth-child(4) .element,
+.cell:nth-child(5) .element,
+.cell:nth-child(6) .element,
+.periodic-row:nth-child(-n+5) .cell:nth-child(7) .element,
+.periodic-row:nth-child(-n+4) .cell:nth-child(8) .element {
+  background-color: #6c0996;
+  opacity: .8;
+  box-shadow: 0px 0px 50px rgba(163, 13, 226, .7);
+
+}
+/*Indica Strain Cells Hover*/
+.cell:nth-child(1):hover .element,
+.cell:nth-child(2):hover .element,
+.cell:nth-child(3):hover .element,
+.cell:nth-child(4):hover .element,
+.cell:nth-child(5):hover .element,
+.cell:nth-child(6):hover .element,
+.periodic-row:nth-child(-n+5) .cell:nth-child(7):hover .element,
+.periodic-row:nth-child(-n+4) .cell:nth-child(8):hover .element  {
+  background-color: #a30de2;
+  opacity: .9;
+  box-shadow: 5px 5px 4px rgba(108, 9, 150, 0.7);
+}
+/*Sativa Strain Cells*/
+.cell:nth-child(22) .element,
+.cell:nth-child(21) .element,
+.cell:nth-child(20) .element,
+.cell:nth-child(19) .element,
+.cell:nth-child(18) .element,
+.cell:nth-child(17) .element,
+.cell:nth-child(16) .element,
+.cell:nth-child(15) .element,
+.cell:nth-child(14) .element{
+  background-color: #d10000;
+  opacity: .8;
+  box-shadow: 0px 0px 50px rgba(255, 0, 0, 0.7);
+}
+
+/*Sativa Strain Cells Hover*/
+.cell:nth-child(22):hover .element,
+.cell:nth-child(21):hover .element,
+.cell:nth-child(20):hover .element,
+.cell:nth-child(19):hover .element,
+.cell:nth-child(18):hover .element,
+.cell:nth-child(17):hover .element,
+.cell:nth-child(16):hover .element,
+.cell:nth-child(15):hover .element,
+.cell:nth-child(14):hover .element{
+  background-color: #ff0000;
+  opacity: .9;
+  box-shadow: 5px 5px 4px rgba(209, 0, 0, 0.7);
+}
+
+/*Hybrid Strain Cells*/
+.periodic-row:nth-child(-n+3) .cell:nth-child(15) .element,
+.periodic-row:nth-child(-n+5) .cell:nth-child(14) .element,
+.cell:nth-child(13) .element,
+.cell:nth-child(12) .element,
+.cell:nth-child(11) .element,
+.cell:nth-child(10) .element,
+.cell:nth-child(9) .element,
+.cell:nth-child(8) .element,
+.cell:nth-child(7) .element{
+  background-color: #008000;
+  opacity: .8;
+  box-shadow: 0px 0px 50px rgba(5, 207, 8, 0.7);
+}
+/*Hybrid Strain Cells Hover*/
+.periodic-row:nth-child(-n+3) .cell:nth-child(15):hover .element,
+.periodic-row:nth-child(-n+5) .cell:nth-child(14):hover .element,
+.cell:nth-child(13):hover .element,
+.cell:nth-child(12):hover .element,
+.cell:nth-child(11):hover .element,
+.cell:nth-child(10):hover .element,
+.cell:nth-child(9):hover .element,
+.cell:nth-child(8):hover .element,
+.cell:nth-child(7):hover .element{
+  background-color: #05CF08;
+  opacity: .9;
+  box-shadow: 5px 5px 4px rgba(0, 128, 0, 0.7);
+}
+
+/*Sets where hover effect appears in first row*/
+.cell:nth-child(1) .element {
+  -webkit-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+}
+/*Sets where hover effect appears in last row*/
+.cell:nth-child(22) .element {
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+/*Sets where hover effect appears in the last 2 cells of row 1*/
+.periodic-row:nth-child(7) .cell .element {
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+/*Sets where hover effect appears in the first 3 cells of row 1*/
+.periodic-row:nth-child(1) .cell:nth-child(n-3) .element {
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+/*Sets where hover effect appears in the last 3 cells of row 1*/
+.periodic-row:nth-child(1) .cell:nth-child(n+3) .element {
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+/*Used media query to make more responsive*/
+@media (min-width: 600px) {
+  .periodic {
+    height: 460px;
+    margin-right: -2px;
+  }
+  .element {
+    right: 2px;
+    bottom: 2px;
+  }
+  .type,
+  .strainName {
+    font-size: 4px;
+    opacity: 1;
+  }
+  .symbol {
+    margin-top: -17px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 30px;
+    height: 30px;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  }
+}
+/*Used media query to make more responsive*/
+@media (min-width: 800px) {
+  .periodic {
+    height: 540px;
+  }
+  .symbol {
+    font-size: 15px;
+  }
+}
+/*Used media query to make more responsive*/
+@media (min-width: 992px) {
+  .periodic {
+    height: 680px;
+  }
+  .type,
+  .strainName {
+    font-size: 5px;
+  }
+  .symbol {
+    font-size: 19px;
+  }
+}
+/*Used media query to make more responsive*/
+@media (min-width: 1200px) {
+  .periodic {
+    height: 800px;
+  }
+  .type,
+  .strainName {
+    font-size: 6px;
+  }
+  .symbol {
+    font-size: 23px;
+  }
+}
